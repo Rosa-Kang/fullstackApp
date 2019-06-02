@@ -1,0 +1,19 @@
+.masonry-wrapper {
+  text-align: center;
+  #image {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry-wrapper {
+    margin: 0px 24px;
+    text-align: center;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .masonry {
+  }
+}
