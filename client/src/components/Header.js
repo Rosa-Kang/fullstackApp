@@ -7,13 +7,13 @@ export default class Header extends Component {
     return (
       <header className="header">
         <div className="header__logo">
-          <Link to="/gallery">
+          <Link to="/">
             <img src={Logo} />
           </Link>
         </div>
         <div className="header__right">
           <div className="header__right--sub">
-            <Link to="/gallery">Gallery</Link>
+            <Link to="/">Gallery</Link>
           </div>
           <div className="header__right--sub">
             <a href="/html/show.html">Upload</a>

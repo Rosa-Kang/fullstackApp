@@ -12,6 +12,7 @@ export default class GalleryCtrl extends Component {
             image={photo.image}
             id={photo.id}
             username={photo.username}
+            likes={photo.likes}
           />
         ))}
       </div>

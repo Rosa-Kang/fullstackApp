@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import "../styles/App.css";
 import axios from "axios";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import GalleryCtrl from "../controller/GalleryCtrl";
+import GalleryCtrl from "../container/GalleryCtrl";
 
-const photoUrl = `https://api.unsplash.com/photos/?client_id=ca97c068a93323c9834dc603947e06792959cee1d06a09b316bfa50ffa1c1679`;
+const photoUrl = `http://localhost:8001/photos`;
 
 export default class App extends Component {
   state = {
@@ -18,9 +16,9 @@ export default class App extends Component {
         return {
           id: photoList.id,
           likes: photoList.likes,
-          image: photoList.urls.thumb,
-          profile: photoList.sponsorship,
-          username: photoList.sponsorship
+          image: photoList.thumb,
+          profile: photoList.profile,
+          username: photoList.username
         };
       });
       this.setState({
@@ -54,9 +52,7 @@ export default class App extends Component {
     console.log(this.state.photos);
     return (
       <div className="App">
-        <Header />
         <GalleryCtrl photos={this.state.photos} />
-        <Footer />
       </div>
     );
   }

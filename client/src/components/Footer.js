@@ -11,8 +11,6 @@ export default class Footer extends Component {
         <div className="footer__myfooter">
           <div className="footer__myfooter--logo">
             <img src={Logo} />
-            <p>test</p>
-            <h2>hello</h2>
           </div>
           <h1 className="footer__myfooter--title">Get In Touch</h1>
           <div className="footer__myfooter--images">
