@@ -3,19 +3,22 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import MainCtrl from "./container/MainCtrl";
 import App from "./components/App";
 import Upload from "./components/Upload";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import GalleryCtrl from "./container/GalleryCtrl";
 
 ReactDOM.render(
   <div>
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route path="/" exact component={App} />
-        <Route path="/upload" component={Upload} />
+        <Route path="/" exact component={MainCtrl} />
+        <Route path="/photos" component={GalleryCtrl} />
         <Route path="/photos/:id" component={App} />
+        <Route path="/upload" component={Upload} />
       </Switch>
       <Footer />
     </BrowserRouter>

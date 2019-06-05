@@ -1,31 +1,28 @@
 import React, { Component } from "react";
 import "../styles/App.css";
-import axios from "axios";
-import GalleryCtrl from "../container/GalleryCtrl";
-
-const photoUrl = `http://localhost:8001/photos`;
 
 export default class App extends Component {
-  state = {
-    photos: []
-  };
-
-  componentDidMount() {
-    axios.get(photoUrl).then(photo => {
-      const newPhotos = photo.data.map(photoList => {
-        return {
-          id: photoList.id,
-          likes: photoList.likes,
-          image: photoList.thumb,
-          profile: photoList.profile,
-          username: photoList.username
-        };
-      });
-      this.setState({
-        photos: newPhotos
-      });
-    });
-  }
+  // state = {
+  //   photos: []
+  // };
+  // componentDidMount() {
+  //   axios.get(photoUrl).then(photo => {
+  //     console.log(photo.data);
+  //     const newPhotos = photo.data.map(photoList => {
+  //       return {
+  //         id: photoList.id,
+  //         title: photoList.title,
+  //         likes: photoList.likes,
+  //         image: photoList.thumb,
+  //         profile: photoList.profile,
+  //         username: photoList.username
+  //       };
+  //     });
+  //     this.setState({
+  //       photos: newPhotos
+  //     });
+  //   });
+  // }
 
   componentDidUpdate(prevState) {
     if (
@@ -47,13 +44,7 @@ export default class App extends Component {
     //   }
     // });
   }
-
   render() {
-    console.log(this.state.photos);
-    return (
-      <div className="App">
-        <GalleryCtrl photos={this.state.photos} />
-      </div>
-    );
+    return <div className="App" />;
   }
 }

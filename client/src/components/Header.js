@@ -13,7 +13,7 @@ export default class Header extends Component {
         </div>
         <div className="header__right">
           <div className="header__right--sub">
-            <Link to="/">Gallery</Link>
+            <Link to="/photos">Gallery</Link>
           </div>
           <div className="header__right--sub">
             <a href="/html/show.html">Upload</a>

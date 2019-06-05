@@ -1,12 +1,35 @@
 import React, { Component } from "react";
 import Gallery from "../components/Gallery";
+import axios from "axios";
 
+const photoUrl = `http://localhost:8001/photos`;
 export default class GalleryCtrl extends Component {
+  state = {
+    photos: []
+  };
+  componentDidMount() {
+    axios.get(photoUrl).then(photo => {
+      console.log(photo.data);
+      const newPhotos = photo.data.map(photoList => {
+        return {
+          id: photoList.id,
+          title: photoList.title,
+          likes: photoList.likes,
+          image: photoList.thumb,
+          profile: photoList.profile,
+          username: photoList.username
+        };
+      });
+      this.setState({
+        photos: newPhotos
+      });
+    });
+  }
   render() {
-    console.log(this.props.photos);
+    console.log(this.props);
     return (
       <div className="masonry-wrapper">
-        {this.props.photos.map(photo => (
+        {this.state.photos.map(photo => (
           <Gallery
             profile={photo.profile}
             image={photo.image}
