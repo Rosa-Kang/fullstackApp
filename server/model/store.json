@@ -1,0 +1,42 @@
+[
+  {
+    "id": "storeItem01",
+    "item": "Jane 2 Loft Bi-Sectional",
+    "price": "$3,445.00",
+    "picture": "https://cdn.shopify.com/s/files/1/1102/8530/products/Jane_2_Loft_Bi-Sectional_Natural_-_Bayview_Silver_-_L01_550x825.jpg?v=1554695929",
+    "description": "",
+    "from": "stylegarage"
+  },
+  {
+    "id": "storeItem02",
+    "item": "ETTA Marble End Table 57cm",
+    "price": "$119",
+    "picture": "https://www.structube.com/en/etta-marble-end-table-57cm-23-19-43-08?pid=22720",
+    "description": "",
+    "from": "structube"
+  },
+  {
+    "id": "storeItem03",
+    "item": "EGAN",
+    "price": "$89",
+    "picture": "https://www.structube.com/media/catalog/product/cache/1/thumbnail/900x698/e4b1f5479754dbf45c8ba1b6c0d19c8b/0/1/01-85.72.70.27_tablelamp_egan.jpg",
+    "description": "",
+    "from": "structube"
+  },
+  {
+    "id": "storeItem04",
+    "item": "TIRSO",
+    "price": "$99",
+    "picture": "https://www.structube.com/media/catalog/product/cache/1/thumbnail/900x698/d42e56d0c11ca3fed44750a11feba001/0/1/01-88.00.29.24_pendantlamp_tirso-88.00.29.24.jpg",
+    "description": "",
+    "from": "structube"
+  },
+  {
+    "id": "storeItem05",
+    "item": "CIRCA I",
+    "price": "$89",
+    "picture": "https://www.structube.com/media/catalog/product/cache/1/thumbnail/900x698/00c55b0d8f26d64921ccfe2eae721e60/0/1/01-10.56.89.20_mirror_circa1-10.56.89.20.jpg",
+    "description": "",
+    "from": "structube"
+  }
+]

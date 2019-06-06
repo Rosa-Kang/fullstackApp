@@ -13,10 +13,16 @@ export default class Header extends Component {
         </div>
         <div className="header__right">
           <div className="header__right--sub">
-            <Link to="/photos">Gallery</Link>
+            <Link to="/photos">GALLERY</Link>
           </div>
           <div className="header__right--sub">
-            <a href="/html/show.html">Upload</a>
+            <a href="/html/show.html">UPLOAD</a>
+          </div>
+          <div className="header__right--sub">
+            <a href="/html/show.html">JOURNAL</a>
+          </div>
+          <div className="header__right--sub">
+            <a href="/html/show.html">STORE</a>
           </div>
         </div>
       </header>

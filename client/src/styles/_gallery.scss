@@ -80,7 +80,7 @@
       }
       &__image {
         position: relative;
-        &--imageLink:hover + .masonry__image--profile,
+        &--imageLink:hover ~ .masonry__image--profile,
         .masonry__image--profile:hover {
           display: flex;
           flex-direction: row;

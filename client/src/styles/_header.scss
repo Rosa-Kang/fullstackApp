@@ -25,11 +25,10 @@
     justify-content: flex-end;
 
     &--sub {
-      padding: 10px;
-      font-size: 15px;
+      padding: 10px 4px 6px 4px;
+      font-size: 9.5px;
       text-align: center;
       a {
-        margin: 0px 4px;
         font-family: myDemi;
         text-decoration: none;
         color: #afafaf;
@@ -43,10 +42,11 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    margin: 24px 24px;
+    margin: 16px 24px;
     &__right {
       &--sub {
-        font-size: 25px;
+        font-size: 13px;
+        margin: 0px 6px;
       }
     }
   }
