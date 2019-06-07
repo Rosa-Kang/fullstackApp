@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Logo from "../assets/logo/cozny.png";
 import Insta from "../assets/icon/SVG/Icon-instagram.svg";
 import Facebook from "../assets/icon/SVG/Icon-facebook.svg";
+import { Link } from "react-router-dom";
 import Twit from "../assets/icon/SVG/Icon-twitter.svg";
 
 export default class Footer extends Component {
@@ -10,18 +11,20 @@ export default class Footer extends Component {
       <footer className="footer">
         <div className="footer__myfooter">
           <div className="footer__myfooter--logo">
-            <img src={Logo} />
+            <Link to="/">
+              <img src={Logo} alt="logo" />
+            </Link>
           </div>
           <h1 className="footer__myfooter--title">Get In Touch</h1>
           <div className="footer__myfooter--images">
             <a href="https://www.instagram.com/explore/tags/homedecor/">
-              <img src={Insta} />
+              <img src={Insta} alt="insta" />
             </a>
             <a href="https://www.facebook.com/kndesigny/">
-              <img src={Facebook} />
+              <img src={Facebook} alt="face" />
             </a>
             <a href="https://twitter.com/">
-              <img src={Twit} />
+              <img src={Twit} alt="twit" />
             </a>
           </div>
         </div>

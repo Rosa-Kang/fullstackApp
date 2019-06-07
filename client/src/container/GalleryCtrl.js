@@ -9,7 +9,6 @@ export default class GalleryCtrl extends Component {
   };
   componentDidMount() {
     axios.get(photoUrl).then(photo => {
-      console.log(photo.data);
       const newPhotos = photo.data.map(photoList => {
         return {
           id: photoList.id,
@@ -27,7 +26,6 @@ export default class GalleryCtrl extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="masonry-wrapper">
         {this.state.photos.map(photo => (

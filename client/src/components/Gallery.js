@@ -16,7 +16,6 @@ export default class Gallery extends Component {
   };
 
   render() {
-    console.log(this.props.id);
     return (
       <div className="masonry">
         <div className="masonry__profile">

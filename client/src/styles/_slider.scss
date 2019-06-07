@@ -9,7 +9,7 @@
     font-family: myMedium;
     padding: 0px 16px;
     color: #ffc20e;
-    font-size: 25px;
+    font-size: 17px;
   }
 
   &__wrapper {
@@ -45,11 +45,17 @@
 @media screen and (min-width: 768px) {
   .slider {
     width: 91%;
+    h3 {
+      font-size: 19px;
+    }
   }
 }
 
 @media screen and (min-width: 1440px) {
   .slider {
     width: 74%;
+    h3 {
+      font-size: 25px;
+    }
   }
 }

@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import Likes from "../assets/icon/SVG/heart.png";
-import PopUp from "../components/PopUp";
 import Save from "../assets/icon/SVG/saved.png";
 
 const PopupCtrl = ({
@@ -23,7 +22,7 @@ const PopupCtrl = ({
       <section className="modal__main">
         <div className="modal__main--flex">
           <div className="modal__main--flex--profile">
-            <img src={profile} id="profile" />
+            <img src={profile} id="profile" alt="profile" />
             <h5>{username}</h5>
           </div>
           <div className="modal__main--flex--likes">
@@ -33,7 +32,7 @@ const PopupCtrl = ({
           </div>
         </div>
         <div className="modal__main--thumb">
-          <img id="thumb" src={image} />
+          <img id="thumb" src={image} alt="thumb" />
           <div className="modal__main--thumb--text">
             <h2>"{title}"</h2>
           </div>

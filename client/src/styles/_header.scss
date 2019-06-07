@@ -19,6 +19,7 @@
     }
   }
   &__right {
+    font-size: 14px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -27,7 +28,7 @@
     img {
       width: 20px;
       height: 20px;
-      padding: 10px 6px 0px 0px;
+      padding: 9px 0px 0px 0px;
     }
 
     &--sub {

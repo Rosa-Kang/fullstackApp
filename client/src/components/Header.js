@@ -9,7 +9,7 @@ export default class Header extends Component {
       <header className="header">
         <div className="header__logo">
           <Link to="/">
-            <img src={Logo} />
+            <img src={Logo} alt="logo" />
           </Link>
         </div>
         <div className="header__right">
@@ -25,7 +25,7 @@ export default class Header extends Component {
             <Link to="/journals">JOURNALS</Link>
           </div>
           <div>
-            <img src={Save} />
+            <img src={Save} alt="save" />
           </div>
         </div>
       </header>
