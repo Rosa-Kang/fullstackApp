@@ -37,6 +37,7 @@ export default class Gallery extends Component {
             <PopupCtrl
               content="hello from Gallery"
               id={this.props.id}
+              username={this.props.username}
               image={this.props.image}
               profile={this.props.profile}
               title={this.props.title}

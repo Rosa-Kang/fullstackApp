@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Slider from "../myFunc/Slider";
-import Stores from "../components/Stores";
+import JournalsCtrl from "../container/JournalCtrl";
 
 const photoUrl = `http://localhost:8001/photos`;
 
@@ -34,7 +34,7 @@ export default class MainCtrl extends Component {
     return (
       <>
         <Slider images={this.state.mains} />
-        <Stores />
+        <JournalsCtrl />
       </>
     );
   }

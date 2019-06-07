@@ -24,9 +24,14 @@
     flex-direction: row;
     justify-content: flex-end;
 
+    img {
+      width: 20px;
+      height: 20px;
+      padding: 10px 6px 0px 0px;
+    }
+
     &--sub {
       padding: 10px 4px 6px 4px;
-      font-size: 9.5px;
       text-align: center;
       a {
         font-family: myDemi;
@@ -44,9 +49,14 @@
   .header {
     margin: 16px 24px;
     &__right {
+      img {
+        margin-right: 10px;
+      }
       &--sub {
-        font-size: 13px;
         margin: 0px 6px;
+        a {
+          margin: 0px 6px;
+        }
       }
     }
   }

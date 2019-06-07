@@ -1,19 +1,24 @@
 @font-face {
-  font-family: Regular;
-  src: url("../assets//font/Linotype-AvenirNextLTPro-Light.otf");
+  font-family: myRegular;
+  src: url("../assets/font/Linotype - AvenirNextLTPro-Thin.otf");
 }
 
 @font-face {
   font-family: myDemi;
-  src: url("../assets//font/Linotype-AvenirNextLTPro-Demi.otf");
+  src: url("../assets/font/Linotype-AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+  font-family: myThin;
+  src: url("../assets/font/Linotype - AvenirNextLTPro-UltLt.otf");
 }
 
 @font-face {
   font-family: myMedium;
-  src: url("../assets//font/Linotype-AvenirNextLTPro-Medium.otf");
+  src: url("../assets/font/Linotype-AvenirNextLTPro-Medium.otf");
 }
 
 @font-face {
   font-family: myBold;
-  src: url("../assets//font/Linotype-AvenirNextLTPro-Bold.otf");
+  src: url("../assets/font/Linotype-AvenirNextLTPro-Bold.otf");
 }

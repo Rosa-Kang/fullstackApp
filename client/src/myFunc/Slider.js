@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Slide from "./Slide";
+import Slide from "../components/Slide";
 
 export default class Slider extends Component {
   constructor(props) {
@@ -47,6 +47,7 @@ export default class Slider extends Component {
   render() {
     return (
       <div className="slider">
+        <h3>10 Best Concepts Most Loved</h3>
         <div
           className="slider__wrapper"
           style={{

@@ -33,7 +33,7 @@ export default class GalleryCtrl extends Component {
         {this.state.photos.map(photo => (
           <Gallery
             profile={photo.profile}
-            title={photo.profile}
+            title={photo.title}
             image={photo.image}
             id={photo.id}
             username={photo.username}

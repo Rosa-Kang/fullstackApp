@@ -9,6 +9,7 @@ import Upload from "./components/Upload";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import GalleryCtrl from "./container/GalleryCtrl";
+import AllStory from "./container/AllStory";
 
 ReactDOM.render(
   <div>
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path="/" exact component={MainCtrl} />
         <Route path="/photos" component={GalleryCtrl} />
         <Route path="/photos/:id" component={App} />
+        <Route path="/journals" component={AllStory} />
         <Route path="/upload" component={Upload} />
       </Switch>
       <Footer />
