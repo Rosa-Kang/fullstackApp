@@ -47,7 +47,7 @@ export default class Slider extends Component {
   render() {
     return (
       <div className="slider">
-        <h3>10 Best Concepts Most Loved</h3>
+        <h3>10 Most Loved Decorating Concepts</h3>
         <div
           className="slider__wrapper"
           style={{

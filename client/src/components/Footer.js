@@ -14,9 +14,15 @@ export default class Footer extends Component {
           </div>
           <h1 className="footer__myfooter--title">Get In Touch</h1>
           <div className="footer__myfooter--images">
-            <img src={Insta} />
-            <img src={Facebook} />
-            <img src={Twit} />
+            <a href="https://www.instagram.com/explore/tags/homedecor/">
+              <img src={Insta} />
+            </a>
+            <a href="https://www.facebook.com/kndesigny/">
+              <img src={Facebook} />
+            </a>
+            <a href="https://twitter.com/">
+              <img src={Twit} />
+            </a>
           </div>
         </div>
 

@@ -29,13 +29,13 @@ const PopupCtrl = ({
           <div className="modal__main--flex--likes">
             <img id="heart" src={Likes} alt="likes" />
             <span>{likes}</span>
+            <img id="save" src={Save} alt="save" />
           </div>
         </div>
         <div className="modal__main--thumb">
           <img id="thumb" src={image} />
           <div className="modal__main--thumb--text">
-            <h2>{title}</h2>
-            <img id="save" src={Save} alt="save" />
+            <h2>"{title}"</h2>
           </div>
         </div>
       </section>
