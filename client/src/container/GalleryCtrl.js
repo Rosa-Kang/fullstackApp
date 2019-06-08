@@ -25,18 +25,31 @@ export default class GalleryCtrl extends Component {
     });
   }
 
+  likePhoto = photoId => {
+    axios.put(`${photoUrl}/${photoId}`).then(response => {
+      this.setState({
+        photos: this.state.photos.map(photo =>
+          photo.id === photoId ? { ...photo, likes: photo.likes + 1 } : photo
+        )
+      });
+    });
+  };
+
   render() {
     return (
       <div className="masonry-wrapper">
         {this.state.photos.map(photo => (
-          <Gallery
-            profile={photo.profile}
-            title={photo.title}
-            image={photo.image}
-            id={photo.id}
-            username={photo.username}
-            likes={photo.likes}
-          />
+          <>
+            <Gallery
+              profile={photo.profile}
+              title={photo.title}
+              image={photo.image}
+              id={photo.id}
+              username={photo.username}
+              likes={photo.likes}
+              likePhoto={this.likePhoto}
+            />
+          </>
         ))}
       </div>
     );

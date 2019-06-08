@@ -18,9 +18,7 @@ ReactDOM.render(
       <Switch>
         <Route path="/" exact component={MainCtrl} />
         <Route path="/photos" component={GalleryCtrl} />
-        <Route path="/photos/:id" component={App} />
         <Route path="/journals" component={AllStory} />
-        <Route path="/upload" component={Upload} />
       </Switch>
       <Footer />
     </BrowserRouter>

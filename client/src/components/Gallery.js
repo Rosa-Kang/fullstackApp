@@ -23,10 +23,7 @@ export default class Gallery extends Component {
           <h4>{this.props.username}</h4>
         </div>
         <div className="masonry__image">
-          <Link
-            className="masonry__image--imageLink"
-            to={`/photos/${this.props.id}`}
-          >
+          <div className="masonry__image--imageLink">
             <img
               id="image"
               src={this.props.image}
@@ -43,8 +40,9 @@ export default class Gallery extends Component {
               likes={this.props.likes}
               show={this.state.isOpen}
               onClose={this.toggleModal}
+              likePhoto={this.props.likePhoto}
             />
-          </Link>
+          </div>
           <div className="masonry__image--likes">
             <img id="likes" src={Likes} alt="likes" />
             <h4 className="num">{this.props.likes}</h4>

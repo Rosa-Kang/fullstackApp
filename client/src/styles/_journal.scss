@@ -26,7 +26,9 @@
         color: #aeaeae;
       }
       img {
-        object-fit: cover;
+        width: 100%;
+        height: 76vw;
+        object-fit: unset;
       }
     }
   }
@@ -36,20 +38,19 @@
   .journals {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 93%;
     margin: 0 auto;
     &__one {
       margin: 10px 10px 48px 10px;
       border: solid 0.5px #e1e1e1;
-      &--anchor {
-        &--car {
+      a {
+        img {
+          object-fit: cover;
+          height: 22vw;
+        }
+        .journals__one--anchor--car {
           min-height: 84px;
         }
-      }
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 180px;
       }
     }
   }

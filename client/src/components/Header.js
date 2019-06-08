@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Logo from "../assets/logo/cozny.png";
 import { Link } from "react-router-dom";
 import Save from "../assets/icon/SVG/saved.png";
+import Login from "../assets/images/login.jpg";
 
 export default class Header extends Component {
   render() {
@@ -15,7 +16,9 @@ export default class Header extends Component {
         <div className="header__right">
           <div className="header__right--sub">
             <Link to="/">
-              <a href="/html/show.html">HOME</a>
+              <a id="home" href="/html/show.html">
+                HOME
+              </a>
             </Link>
           </div>
           <div className="header__right--sub">
@@ -25,7 +28,10 @@ export default class Header extends Component {
             <Link to="/journals">JOURNALS</Link>
           </div>
           <div>
-            <img src={Save} alt="save" />
+            <img id="save" src={Save} alt="save" />
+          </div>
+          <div>
+            <img id="login" src={Login} alt="login" />
           </div>
         </div>
       </header>

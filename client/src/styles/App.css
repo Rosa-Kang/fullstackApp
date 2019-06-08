@@ -68,14 +68,20 @@
           justify-content: flex-end;
 }
 
-.header__right img {
+.header__right #save {
   width: 20px;
   height: 20px;
-  padding: 9px 0px 0px 0px;
+  padding: 13px 0px 0px 0px;
+}
+
+.header__right #login {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
 }
 
 .header__right--sub {
-  padding: 10px 4px 6px 4px;
+  padding: 16px 4px 6px 4px;
   text-align: center;
 }
 
@@ -89,12 +95,26 @@
   border-bottom: solid pink;
 }
 
+@media screen and (max-width: 600px) {
+  #home {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header {
     margin: 16px 24px;
   }
-  .header__right img {
+  .header__right {
+    font-size: 18px;
+  }
+  .header__right #save {
     margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  .header__right #login {
+    border: #aeaeae 1px solid;
   }
   .header__right--sub {
     margin: 0px 6px;
@@ -219,8 +239,10 @@
 }
 
 .journals__one a img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
+  height: 76vw;
+  -o-object-fit: unset;
+     object-fit: unset;
 }
 
 @media screen and (min-width: 768px) {
@@ -232,21 +254,20 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 90%;
+    width: 93%;
     margin: 0 auto;
   }
   .journals__one {
     margin: 10px 10px 48px 10px;
     border: solid 0.5px #e1e1e1;
   }
-  .journals__one--anchor--car {
-    min-height: 84px;
-  }
-  .journals__one img {
+  .journals__one a img {
     -o-object-fit: cover;
        object-fit: cover;
-    width: 100%;
-    height: 180px;
+    height: 22vw;
+  }
+  .journals__one a .journals__one--anchor--car {
+    min-height: 84px;
   }
 }
 
@@ -554,7 +575,21 @@
 }
 
 .modal button {
+  position: absolute;
+  font-family: myDemi;
+  top: 124px;
+  left: 0px;
   border: none;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  opacity: 0.8;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
 }
 
 .modal__main {
@@ -569,14 +604,16 @@
 }
 
 .modal__main--thumb #thumb {
-  width: 80%;
-  height: 500px;
+  width: 90%;
+  height: 63vw;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 13px 0px 0px 0px;
 }
 
 .modal__main--thumb h2 {
   margin: 0px;
+  font-size: 15px;
 }
 
 .modal__main--thumb--text {
@@ -618,14 +655,20 @@
           flex-direction: row;
 }
 
-.modal__main--flex--profile #profile {
+.modal__main--flex--profile #photographer {
   width: 48px;
   height: 48px;
   border-radius: 50%;
 }
 
+.modal__main--flex--profile h5 {
+  margin: 0px;
+  text-align: left;
+  padding: 14px 0px 0px 6px;
+}
+
 .modal__main--flex--likes {
-  margin: 16px 16px 0px 0px;
+  margin: 16px 13px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,17 +679,48 @@
 }
 
 .modal__main--flex--likes #heart {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 }
 
 .modal__main--flex--likes span {
-  padding: 6px 5px 0px 0px;
+  padding: 6px 7px 0px 0px;
 }
 
 .modal__main--flex--likes #save {
   width: 30px;
   height: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal button {
+    top: 0px;
+    left: 10px;
+  }
+  .modal__main--thumb h2 {
+    font-size: 1.2em;
+  }
+  .modal__main--thumb #thumb {
+    width: 90%;
+    height: 500px;
+  }
+  .modal__main--flex--profile #photographer {
+    margin-left: 16px;
+  }
+  .modal__main--flex--profile h5 {
+    font-size: 1em;
+    padding: 14px 0px 0px 10px;
+  }
+  .modal__main--flex--likes {
+    margin: 16px 24px 0px 0px;
+  }
+  .modal__main--flex--likes #heart {
+    width: 30px;
+    height: 30px;
+  }
+  .modal__main--flex--likes span {
+    padding: 6px 17px 0px 0px;
+  }
 }
 
 .AllStory {

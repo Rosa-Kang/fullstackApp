@@ -4,7 +4,6 @@
   align-items: center;
   background-color: white;
   margin: 16px;
-
   &__logo {
     img {
       height: 60px;
@@ -24,15 +23,18 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-
-    img {
+    #save {
       width: 20px;
       height: 20px;
-      padding: 9px 0px 0px 0px;
+      padding: 13px 0px 0px 0px;
     }
-
+    #login {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+    }
     &--sub {
-      padding: 10px 4px 6px 4px;
+      padding: 16px 4px 6px 4px;
       text-align: center;
       a {
         font-family: myDemi;
@@ -45,13 +47,23 @@
     }
   }
 }
-
+@media screen and (max-width: 600px) {
+  #home {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .header {
     margin: 16px 24px;
     &__right {
-      img {
+      font-size: 18px;
+      #save {
         margin-right: 10px;
+        width: 30px;
+        height: 30px;
+      }
+      #login {
+        border: #aeaeae 1px solid;
       }
       &--sub {
         margin: 0px 6px;
