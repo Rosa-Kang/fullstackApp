@@ -16,6 +16,20 @@ const photoController = {
     helper.writeJSONFile(photosJsonFile, updatedPhotos);
     const updatedPhoto = updatedPhotos.find(photo => photo.id === id);
     return updatedPhoto;
+  },
+
+  controlSave: id => {
+    console.log("working");
+    const photos = helper.readJSONFile(photosJsonFile);
+    const updatedPhotos = photos.map(photo => {
+      if (photo.id === id) {
+        return { ...photo, tags: 1 };
+      }
+      return { ...photo };
+    });
+    helper.writeJSONFile(photosJsonFile, updatedPhotos);
+    const updatedPhoto = updatedPhotos.find(photo => photo.id === id);
+    return updatedPhoto;
   }
 };
 

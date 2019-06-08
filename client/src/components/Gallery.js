@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Likes from "../assets/icon/SVG/heart.png";
 import PopupCtrl from "../container/PopupCtrl";
 
@@ -41,6 +40,8 @@ export default class Gallery extends Component {
               show={this.state.isOpen}
               onClose={this.toggleModal}
               likePhoto={this.props.likePhoto}
+              savePhoto={this.props.savePhoto}
+              tags={this.props.tags}
             />
           </div>
           <div className="masonry__image--likes">

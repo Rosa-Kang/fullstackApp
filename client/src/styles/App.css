@@ -286,6 +286,34 @@
   }
 }
 
+.searchBar {
+  margin: 16px;
+}
+
+.searchBar__Bar {
+  min-height: 47px;
+  margin-top: 8px;
+  width: 100%;
+  border-radius: 4px;
+  background: #fafafa url("../assets/icon/SVG/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 50%;
+  text-indent: 43px;
+  font-size: 1.1em;
+  font-family: Regular;
+  color: #323232;
+  border: 1px solid #e1e1e1;
+}
+
+@media only screen and (min-width: 1440px) {
+  .searchBar {
+    margin: 0px 180px;
+  }
+  .searchBar__Bar {
+    width: 400px;
+  }
+}
+
 .masonry-wrapper {
   text-align: center;
 }

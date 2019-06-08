@@ -8,9 +8,14 @@ router.get("/", (req, res) => {
 });
 
 //Put
-router.put("/:id", (req, res) => {
+router.put("/likes/:id", (req, res) => {
   //Some stuff here
   res.json(photoController.incrementLikes(req.params.id));
+});
+
+router.put("/save/:id", (req, res) => {
+  //Some stuff here
+  res.json(photoController.controlSave(req.params.id));
 });
 
 module.exports = router;

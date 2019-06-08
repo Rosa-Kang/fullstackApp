@@ -1,6 +1,7 @@
 import React from "react";
 import Likes from "../assets/icon/SVG/heart.png";
-import Save from "../assets/icon/SVG/saved.png";
+import Save from "../assets/icon/SVG/save.png";
+import Saved from "../assets/icon/SVG/saved.png";
 
 const PopupCtrl = ({
   id,
@@ -12,10 +13,20 @@ const PopupCtrl = ({
   profile,
   username,
   likes,
-  likePhoto
+  likePhoto,
+  savePhoto,
+  tags
 }) => {
+  let saveImg;
+
   if (!show) {
     return null;
+  }
+
+  if (tags === 0) {
+    saveImg = Save;
+  } else {
+    saveImg = Saved;
   }
   return (
     <div className="modal">
@@ -34,7 +45,13 @@ const PopupCtrl = ({
               onClick={() => likePhoto(id)}
             />
             <span>{likes}</span>
-            <img id="save" src={Save} alt="save" />
+            <img
+              id="save"
+              src={saveImg}
+              alt="save"
+              onClick={() => savePhoto(id, tags)}
+            />
+            <span>{tags}</span>
           </div>
         </div>
         <div className="modal__main--thumb">

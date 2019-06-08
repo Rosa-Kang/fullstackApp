@@ -16,7 +16,8 @@ export default class GalleryCtrl extends Component {
           likes: photoList.likes,
           image: photoList.thumb,
           profile: photoList.profile,
-          username: photoList.username
+          username: photoList.username,
+          tags: photoList.tags
         };
       });
       this.setState({
@@ -26,7 +27,7 @@ export default class GalleryCtrl extends Component {
   }
 
   likePhoto = photoId => {
-    axios.put(`${photoUrl}/${photoId}`).then(response => {
+    axios.put(`${photoUrl}/likes/${photoId}`).then(response => {
       this.setState({
         photos: this.state.photos.map(photo =>
           photo.id === photoId ? { ...photo, likes: photo.likes + 1 } : photo
@@ -35,11 +36,51 @@ export default class GalleryCtrl extends Component {
     });
   };
 
+  savePhoto = (photoId, phtoTags) => {
+    console.log(photoId);
+    console.log(phtoTags);
+    if (phtoTags === 0) {
+      axios.put(`${photoUrl}/save/${photoId}`).then(response => {
+        this.setState({
+          photos: this.state.photos.map(photo =>
+            photo.id === photoId ? { ...photo, tags: 1 } : photo
+          )
+        });
+      });
+    } else {
+      axios.put(`${photoUrl}/save/${photoId}`).then(response => {
+        this.setState({
+          photos: this.state.photos.map(photo =>
+            photo.id === photoId ? { ...photo, tags: 0 } : photo
+          )
+        });
+      });
+    }
+  };
+
+  searchPhoto = e => {
+    e.preventDefault();
+    axios.get(photoUrl).then(response => {
+      this.setState({
+        photos: this.state.photos.filter(photo =>
+          photo.style === e.target.value ? { ...photo } : photo
+        )
+      });
+    });
+  };
+
   render() {
     return (
-      <div className="masonry-wrapper">
-        {this.state.photos.map(photo => (
-          <>
+      <>
+        <div className="searchBar">
+          <input
+            className="searchBar__Bar"
+            placeholder="Search"
+            onSubmit={this.searchPhoto}
+          />
+        </div>
+        <div className="masonry-wrapper">
+          {this.state.photos.map(photo => (
             <Gallery
               profile={photo.profile}
               title={photo.title}
@@ -48,10 +89,12 @@ export default class GalleryCtrl extends Component {
               username={photo.username}
               likes={photo.likes}
               likePhoto={this.likePhoto}
+              savePhoto={this.savePhoto}
+              tags={photo.tags}
             />
-          </>
-        ))}
-      </div>
+          ))}
+        </div>
+      </>
     );
   }
 }
