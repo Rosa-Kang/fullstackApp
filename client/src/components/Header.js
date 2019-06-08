@@ -27,9 +27,9 @@ export default class Header extends Component {
           <div className="header__right--sub">
             <Link to="/journals">JOURNALS</Link>
           </div>
-          <div>
+          <Link to="/saved">
             <img id="save" src={Save} alt="save" />
-          </div>
+          </Link>
           <div>
             <img id="login" src={Login} alt="login" />
           </div>

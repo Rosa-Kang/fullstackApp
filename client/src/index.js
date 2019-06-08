@@ -4,12 +4,12 @@ import "./index.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MainCtrl from "./container/MainCtrl";
-import App from "./components/App";
-import Upload from "./components/Upload";
+import "./styles/App.css";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import GalleryCtrl from "./container/GalleryCtrl";
 import AllStory from "./container/AllStory";
+import Saved from "./components/Saved";
 
 ReactDOM.render(
   <div>
@@ -19,6 +19,7 @@ ReactDOM.render(
         <Route path="/" exact component={MainCtrl} />
         <Route path="/photos" component={GalleryCtrl} />
         <Route path="/journals" component={AllStory} />
+        <Route path="/saved" component={Saved} />
       </Switch>
       <Footer />
     </BrowserRouter>

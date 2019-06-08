@@ -3,8 +3,43 @@ import React, { Component } from "react";
 export default class Saved extends Component {
   render() {
     return (
-      <div>
-        <div className="savedPhotos" />
+      <div className="masonry">
+        <div className="masonry__profile">
+          <img id="profile" src={this.props.profile} alt="profile" />
+          <h4>{this.props.username}</h4>
+        </div>
+        <div className="masonry__image">
+          <div className="masonry__image--imageLink">
+            <img
+              id="image"
+              src={this.props.image}
+              alt="thumbnail"
+              onClick={this.toggleModal}
+            />
+            <PopupCtrl
+              content="hello from Gallery"
+              id={this.props.id}
+              username={this.props.username}
+              image={this.props.image}
+              profile={this.props.profile}
+              title={this.props.title}
+              likes={this.props.likes}
+              show={this.state.isOpen}
+              onClose={this.toggleModal}
+              likePhoto={this.props.likePhoto}
+              savePhoto={this.props.savePhoto}
+              tags={this.props.tags}
+            />
+          </div>
+          <div className="masonry__image--likes">
+            <img id="likes" src={Likes} alt="likes" />
+            <h4 className="num">{this.props.likes}</h4>
+          </div>
+          <div className="masonry__image--profile">
+            <img id="profile" src={this.props.profile} alt="profile" />
+            <h4>{this.props.username}</h4>
+          </div>
+        </div>
       </div>
     );
   }
