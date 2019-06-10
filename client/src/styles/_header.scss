@@ -26,13 +26,14 @@
     #save {
       width: 20px;
       height: 20px;
-      padding: 13px 0px 0px 0px;
+      padding: 14.5px 6px 0px 5px;
     }
     #login {
       width: 42px;
       height: 42px;
       border-radius: 50%;
     }
+
     &--sub {
       padding: 16px 4px 6px 4px;
       text-align: center;
@@ -45,6 +46,9 @@
     &--sub:hover {
       border-bottom: solid pink;
     }
+    &--login {
+      padding-top: 5px;
+    }
   }
 }
 @media screen and (max-width: 600px) {
@@ -55,10 +59,13 @@
 @media screen and (min-width: 768px) {
   .header {
     margin: 16px 24px;
+    &__logo {
+      height: 68px;
+    }
     &__right {
       font-size: 18px;
       #save {
-        margin-right: 10px;
+        margin-right: 5px;
         width: 30px;
         height: 30px;
       }
@@ -77,6 +84,6 @@
 
 @media screen and (min-width: 1440px) {
   .header {
-    margin: 24px 180px;
+    margin: 24px 190px;
   }
 }

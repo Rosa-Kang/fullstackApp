@@ -30,7 +30,6 @@ export default class Gallery extends Component {
               onClick={this.toggleModal}
             />
             <PopupCtrl
-              content="hello from Gallery"
               id={this.props.id}
               username={this.props.username}
               image={this.props.image}
@@ -39,6 +38,7 @@ export default class Gallery extends Component {
               likes={this.props.likes}
               show={this.state.isOpen}
               onClose={this.toggleModal}
+              forceRendering={this.props.forceRendering}
               likePhoto={this.props.likePhoto}
               savePhoto={this.props.savePhoto}
               tags={this.props.tags}

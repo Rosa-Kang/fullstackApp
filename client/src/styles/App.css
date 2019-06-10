@@ -71,7 +71,7 @@
 .header__right #save {
   width: 20px;
   height: 20px;
-  padding: 13px 0px 0px 0px;
+  padding: 14.5px 6px 0px 5px;
 }
 
 .header__right #login {
@@ -95,6 +95,10 @@
   border-bottom: solid pink;
 }
 
+.header__right--login {
+  padding-top: 5px;
+}
+
 @media screen and (max-width: 600px) {
   #home {
     display: none;
@@ -105,11 +109,14 @@
   .header {
     margin: 16px 24px;
   }
+  .header__logo {
+    height: 68px;
+  }
   .header__right {
     font-size: 18px;
   }
   .header__right #save {
-    margin-right: 10px;
+    margin-right: 5px;
     width: 30px;
     height: 30px;
   }
@@ -126,7 +133,7 @@
 
 @media screen and (min-width: 1440px) {
   .header {
-    margin: 24px 180px;
+    margin: 24px 190px;
   }
 }
 

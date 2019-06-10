@@ -7,7 +7,6 @@ const PopupCtrl = ({
   id,
   onClose,
   show,
-  content,
   title,
   image,
   profile,
@@ -15,6 +14,7 @@ const PopupCtrl = ({
   likes,
   likePhoto,
   savePhoto,
+  forceRendering,
   tags
 }) => {
   let saveImg;
@@ -30,7 +30,14 @@ const PopupCtrl = ({
   }
   return (
     <div className="modal">
-      <button onClick={onClose}>X</button>
+      <button
+        onClick={event => {
+          onClose();
+          forceRendering();
+        }}
+      >
+        X
+      </button>
       <section className="modal__main">
         <div className="modal__main--flex">
           <div className="modal__main--flex--profile">

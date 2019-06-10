@@ -3,10 +3,13 @@ import Gallery from "../components/Gallery";
 import axios from "axios";
 
 const photoUrl = `http://localhost:8001/photos`;
-export default class Saved extends Component {
+
+export default class GalleryCtrl extends Component {
   state = {
-    photos: []
+    photos: [],
+    filtered: []
   };
+
   componentDidMount() {
     axios.get(photoUrl).then(photo => {
       const newPhotos = photo.data.filter(photoList => {
@@ -23,15 +26,22 @@ export default class Saved extends Component {
         }
       });
       this.setState({
-        photos: newPhotos
+        photos: newPhotos,
+        filtered: newPhotos
       });
     });
   }
 
+  forceRendering = () => {
+    console.log("rerender in Saved");
+    window.location.reload();
+    // this.forceUpdate();
+  };
+
   likePhoto = photoId => {
     axios.put(`${photoUrl}/likes/${photoId}`).then(response => {
       this.setState({
-        photos: this.state.photos.map(photo =>
+        filtered: this.state.photos.map(photo =>
           photo.id === photoId ? { ...photo, likes: photo.likes + 1 } : photo
         )
       });
@@ -39,12 +49,13 @@ export default class Saved extends Component {
   };
 
   savePhoto = (photoId, phtoTags) => {
+    console.log("saved");
     console.log(photoId);
     console.log(phtoTags);
     if (phtoTags === 0) {
       axios.put(`${photoUrl}/save/${photoId}`).then(response => {
         this.setState({
-          filtered: this.state.filtered.map(photo =>
+          filtered: this.state.photos.map(photo =>
             photo.id === photoId ? { ...photo, tags: 1 } : photo
           )
         });
@@ -52,7 +63,7 @@ export default class Saved extends Component {
     } else {
       axios.put(`${photoUrl}/save/${photoId}`).then(response => {
         this.setState({
-          filtered: this.state.filtered.map(photo =>
+          filtered: this.state.photos.map(photo =>
             photo.id === photoId ? { ...photo, tags: 0 } : photo
           )
         });
@@ -64,7 +75,7 @@ export default class Saved extends Component {
     console.log(this.state.photos[0]);
     return (
       <div className="masonry-wrapper">
-        {this.state.photos.map(photo => (
+        {this.state.filtered.map(photo => (
           <Gallery
             profile={photo.profile}
             title={photo.title}
@@ -74,6 +85,7 @@ export default class Saved extends Component {
             likes={photo.likes}
             likePhoto={this.likePhoto}
             savePhoto={this.savePhoto}
+            forceRendering={this.forceRendering}
             tags={photo.tags}
           />
         ))}

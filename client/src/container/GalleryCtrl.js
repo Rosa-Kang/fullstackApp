@@ -42,7 +42,7 @@ export default class GalleryCtrl extends Component {
   likePhoto = photoId => {
     axios.put(`${photoUrl}/likes/${photoId}`).then(response => {
       this.setState({
-        photos: this.state.photos.map(photo =>
+        filtered: this.state.filtered.map(photo =>
           photo.id === photoId ? { ...photo, likes: photo.likes + 1 } : photo
         )
       });
@@ -69,6 +69,10 @@ export default class GalleryCtrl extends Component {
         });
       });
     }
+  };
+
+  forceRendering = () => {
+    console.log("rerender in Gallery Ctrl");
   };
 
   handleChange(e) {
@@ -140,6 +144,7 @@ export default class GalleryCtrl extends Component {
               likes={photo.likes}
               likePhoto={this.likePhoto}
               savePhoto={this.savePhoto}
+              forceRendering={this.forceRendering}
               tags={photo.tags}
             />
           ))}

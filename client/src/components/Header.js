@@ -30,7 +30,7 @@ export default class Header extends Component {
           <Link to="/saved">
             <img id="save" src={Save} alt="save" />
           </Link>
-          <div>
+          <div className="header__right--login">
             <img id="login" src={Login} alt="login" />
           </div>
         </div>
