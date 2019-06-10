@@ -4,26 +4,21 @@ import Slide from "../components/Slide";
 export default class Slider extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       currentIndex: 0,
       translateValue: 0
     };
   }
-
   goToPrevSlide = () => {
     if (this.state.currentIndex === 0) return;
-
     this.setState(prevState => ({
       currentIndex: prevState.currentIndex - 1,
       translateValue: prevState.translateValue + this.slideWidth()
     }));
   };
-
   componentDidMount() {
     setTimeout(this.goToNextSlide, 3000);
   }
-
   goToNextSlide = () => {
     if (this.state.currentIndex === this.props.images.length - 1) {
       return this.setState({
@@ -31,7 +26,6 @@ export default class Slider extends Component {
         translateValue: 0
       });
     }
-
     // This will not run if we met the if condition above
     this.setState(prevState => ({
       currentIndex: prevState.currentIndex + 1,
@@ -39,11 +33,9 @@ export default class Slider extends Component {
     }));
     setTimeout(this.goToNextSlide, 3000);
   };
-
   slideWidth = () => {
     return document.querySelector(".slider__wrapper--slide").clientWidth;
   };
-
   render() {
     return (
       <div className="slider">

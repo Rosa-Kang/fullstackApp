@@ -23,7 +23,11 @@ const photoController = {
     const photos = helper.readJSONFile(photosJsonFile);
     const updatedPhotos = photos.map(photo => {
       if (photo.id === id) {
-        return { ...photo, tags: 1 };
+        if (photo.tags === 0) {
+          return { ...photo, tags: 1 };
+        } else {
+          return { ...photo, tags: 0 };
+        }
       }
       return { ...photo };
     });

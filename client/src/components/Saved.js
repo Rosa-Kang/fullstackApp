@@ -1,45 +1,82 @@
 import React, { Component } from "react";
+import Gallery from "../components/Gallery";
+import axios from "axios";
 
+const photoUrl = `http://localhost:8001/photos`;
 export default class Saved extends Component {
+  state = {
+    photos: []
+  };
+  componentDidMount() {
+    axios.get(photoUrl).then(photo => {
+      const newPhotos = photo.data.filter(photoList => {
+        if (photoList.tags === 1) {
+          return {
+            id: photoList.id,
+            title: photoList.title,
+            likes: photoList.likes,
+            image: photoList.thumb,
+            profile: photoList.profile,
+            username: photoList.username,
+            tags: photoList.tags
+          };
+        }
+      });
+      this.setState({
+        photos: newPhotos
+      });
+    });
+  }
+
+  likePhoto = photoId => {
+    axios.put(`${photoUrl}/likes/${photoId}`).then(response => {
+      this.setState({
+        photos: this.state.photos.map(photo =>
+          photo.id === photoId ? { ...photo, likes: photo.likes + 1 } : photo
+        )
+      });
+    });
+  };
+
+  savePhoto = (photoId, phtoTags) => {
+    console.log(photoId);
+    console.log(phtoTags);
+    if (phtoTags === 0) {
+      axios.put(`${photoUrl}/save/${photoId}`).then(response => {
+        this.setState({
+          filtered: this.state.filtered.map(photo =>
+            photo.id === photoId ? { ...photo, tags: 1 } : photo
+          )
+        });
+      });
+    } else {
+      axios.put(`${photoUrl}/save/${photoId}`).then(response => {
+        this.setState({
+          filtered: this.state.filtered.map(photo =>
+            photo.id === photoId ? { ...photo, tags: 0 } : photo
+          )
+        });
+      });
+    }
+  };
+
   render() {
+    console.log(this.state.photos[0]);
     return (
-      <div className="masonry">
-        <div className="masonry__profile">
-          <img id="profile" src={this.props.profile} alt="profile" />
-          <h4>{this.props.username}</h4>
-        </div>
-        <div className="masonry__image">
-          <div className="masonry__image--imageLink">
-            <img
-              id="image"
-              src={this.props.image}
-              alt="thumbnail"
-              onClick={this.toggleModal}
-            />
-            <PopupCtrl
-              content="hello from Gallery"
-              id={this.props.id}
-              username={this.props.username}
-              image={this.props.image}
-              profile={this.props.profile}
-              title={this.props.title}
-              likes={this.props.likes}
-              show={this.state.isOpen}
-              onClose={this.toggleModal}
-              likePhoto={this.props.likePhoto}
-              savePhoto={this.props.savePhoto}
-              tags={this.props.tags}
-            />
-          </div>
-          <div className="masonry__image--likes">
-            <img id="likes" src={Likes} alt="likes" />
-            <h4 className="num">{this.props.likes}</h4>
-          </div>
-          <div className="masonry__image--profile">
-            <img id="profile" src={this.props.profile} alt="profile" />
-            <h4>{this.props.username}</h4>
-          </div>
-        </div>
+      <div className="masonry-wrapper">
+        {this.state.photos.map(photo => (
+          <Gallery
+            profile={photo.profile}
+            title={photo.title}
+            image={photo.thumb}
+            id={photo.id}
+            username={photo.username}
+            likes={photo.likes}
+            likePhoto={this.likePhoto}
+            savePhoto={this.savePhoto}
+            tags={photo.tags}
+          />
+        ))}
       </div>
     );
   }

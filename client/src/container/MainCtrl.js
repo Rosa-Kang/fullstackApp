@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Slider from "../myFunc/Slider";
+import Slider from "./Slider";
 import JournalsCtrl from "../container/JournalCtrl";
 
 const photoUrl = `http://localhost:8001/photos`;

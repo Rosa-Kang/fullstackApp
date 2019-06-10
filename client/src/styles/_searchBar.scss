@@ -3,7 +3,7 @@
   &__Bar {
     min-height: 47px;
     margin-top: 8px;
-    width: 100%;
+    width: 80%;
     border-radius: 4px;
     background: #fafafa url("../assets/icon/SVG/Icon-search.svg");
     background-repeat: no-repeat;
@@ -17,12 +17,18 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .searchBar {
+    margin: 16px 24px;
+    &__Bar {
+      width: 60%;
+    }
+  }
 }
 @media only screen and (min-width: 1440px) {
   .searchBar {
-    margin: 0px 180px;
+    margin: 24px 180px;
     &__Bar {
-      width: 400px;
+      width: 65%;
     }
   }
 }

@@ -48,6 +48,9 @@
           object-fit: cover;
           height: 22vw;
         }
+        img:hover {
+          filter: brightness(75%);
+        }
         .journals__one--anchor--car {
           min-height: 84px;
         }

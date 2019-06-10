@@ -266,6 +266,10 @@
        object-fit: cover;
     height: 22vw;
   }
+  .journals__one a img:hover {
+    -webkit-filter: brightness(75%);
+            filter: brightness(75%);
+  }
   .journals__one a .journals__one--anchor--car {
     min-height: 84px;
   }
@@ -293,7 +297,7 @@
 .searchBar__Bar {
   min-height: 47px;
   margin-top: 8px;
-  width: 100%;
+  width: 80%;
   border-radius: 4px;
   background: #fafafa url("../assets/icon/SVG/Icon-search.svg");
   background-repeat: no-repeat;
@@ -305,12 +309,21 @@
   border: 1px solid #e1e1e1;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 768px) {
   .searchBar {
-    margin: 0px 180px;
+    margin: 16px 24px;
   }
   .searchBar__Bar {
-    width: 400px;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .searchBar {
+    margin: 24px 180px;
+  }
+  .searchBar__Bar {
+    width: 65%;
   }
 }
 
@@ -324,7 +337,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  margin-left: 16px;
+  margin: 0px;
 }
 
 .masonry-wrapper .masonry__profile {
@@ -434,11 +447,11 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 8px 0px;
     position: absolute;
     bottom: 10px;
-    left: 0px;
+    left: 8px;
     color: white;
+    background-color: rgba(0, 0, 0, 0.1);
   }
   .masonry-wrapper .masonry__image--imageLink:hover ~ .masonry__image--profile h4,
   .masonry-wrapper .masonry__image .masonry__image--profile:hover h4 {
