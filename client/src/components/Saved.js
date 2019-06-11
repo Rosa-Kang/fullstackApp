@@ -4,7 +4,7 @@ import axios from "axios";
 
 const photoUrl = `http://localhost:8001/photos`;
 
-export default class GalleryCtrl extends Component {
+export default class Saved extends Component {
   state = {
     photos: [],
     filtered: []
@@ -35,7 +35,7 @@ export default class GalleryCtrl extends Component {
   forceRendering = () => {
     console.log("rerender in Saved");
     window.location.reload();
-    // this.forceUpdate();
+    this.forceUpdate();
   };
 
   likePhoto = photoId => {

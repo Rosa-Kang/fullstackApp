@@ -50,8 +50,7 @@ export default class GalleryCtrl extends Component {
   };
 
   savePhoto = (photoId, phtoTags) => {
-    console.log(photoId);
-    console.log(phtoTags);
+    console.log("Tag is: ", phtoTags);
     if (phtoTags === 0) {
       axios.put(`${photoUrl}/save/${photoId}`).then(response => {
         this.setState({

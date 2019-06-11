@@ -3,8 +3,18 @@ import Logo from "../assets/logo/cozny.png";
 import { Link } from "react-router-dom";
 import Save from "../assets/icon/SVG/save.png";
 import Login from "../assets/images/login.jpg";
+import LoginCtrl from "../container/LoginCtrl";
 
 export default class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isOpen: false };
+  }
+  toggleModal = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  };
   render() {
     return (
       <header className="header">
@@ -31,7 +41,13 @@ export default class Header extends Component {
             <img id="save" src={Save} alt="save" />
           </Link>
           <div className="header__right--login">
-            <img id="login" src={Login} alt="login" />
+            <img
+              id="login"
+              src={Login}
+              alt="login"
+              onClick={this.toggleModal}
+            />
+            <LoginCtrl show={this.state.isOpen} onClose={this.toggleModal} />
           </div>
         </div>
       </header>

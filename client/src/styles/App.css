@@ -45,7 +45,7 @@
 }
 
 .header__logo img:hover {
-  background: #323232;
+  background: #ffe58e;
   width: 63px;
   height: 63px;
   border-radius: 100px;
@@ -137,6 +137,52 @@
   }
 }
 
+.loginCtrl {
+  font-family: myDemi;
+  color: grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.loginCtrl__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  background: white;
+  width: 30%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginCtrl__text h3 {
+  margin: 20px 10px;
+}
+
+.loginCtrl__text button {
+  height: 36px;
+  border-radius: 18px;
+  color: #3899ec;
+  background-color: transparent;
+  border-color: #3899ec;
+  margin: 15px 10px;
+}
+
+.loginCtrl__text img {
+  margin: 10px 10px;
+}
+
 .slider {
   position: relative;
   width: 100%;
@@ -190,6 +236,7 @@
 @media screen and (min-width: 768px) {
   .slider {
     width: 91%;
+    margin-bottom: 24px;
   }
   .slider h3 {
     font-size: 19px;
@@ -263,6 +310,7 @@
             flex-direction: row;
     width: 93%;
     margin: 0 auto;
+    margin-bottom: 24px;
   }
   .journals__one {
     margin: 10px 10px 48px 10px;
@@ -355,7 +403,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 10px 0px;
+  margin: 10px 16px;
 }
 
 .masonry-wrapper .masonry__profile h4 {
@@ -557,7 +605,7 @@
     justify-self: flex-end;
     margin-top: 0px;
     padding: 20px 0px 0px 12px;
-    height: 12vw;
+    height: 6vw;
     margin-left: auto;
   }
   .footer__text {
