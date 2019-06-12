@@ -84,6 +84,14 @@
 
 @media screen and (min-width: 1440px) {
   .header {
-    margin: 24px 190px;
+    margin: 24px 195px;
+    &__right {
+      #save {
+        margin-right: 16px;
+      }
+      &--sub {
+        margin: 0px 16px;
+      }
+    }
   }
 }

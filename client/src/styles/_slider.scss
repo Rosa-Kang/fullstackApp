@@ -17,7 +17,7 @@
     width: 100%;
     &--slide {
       display: inline-block;
-      height: 80%;
+      height: 84%;
       width: 100%;
       animation-name: fade;
       animation-duration: 1.5s;
@@ -43,7 +43,6 @@
 @media screen and (min-width: 768px) {
   .slider {
     width: 91%;
-    margin-bottom: 24px;
     h3 {
       font-size: 19px;
     }

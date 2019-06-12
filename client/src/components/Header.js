@@ -2,19 +2,27 @@ import React, { Component } from "react";
 import Logo from "../assets/logo/cozny.png";
 import { Link } from "react-router-dom";
 import Save from "../assets/icon/SVG/save.png";
+import Logout from "../assets/images/logout.jpg";
 import Login from "../assets/images/login.jpg";
 import LoginCtrl from "../container/LoginCtrl";
 
 export default class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = { isOpen: false };
+    this.state = { isOpen: false, login: Logout };
   }
   toggleModal = () => {
     this.setState({
       isOpen: !this.state.isOpen
     });
   };
+
+  loginFunc = () => {
+    this.setState({
+      login: Login
+    });
+  };
+
   render() {
     return (
       <header className="header">
@@ -43,11 +51,15 @@ export default class Header extends Component {
           <div className="header__right--login">
             <img
               id="login"
-              src={Login}
+              src={this.state.login}
               alt="login"
               onClick={this.toggleModal}
             />
-            <LoginCtrl show={this.state.isOpen} onClose={this.toggleModal} />
+            <LoginCtrl
+              show={this.state.isOpen}
+              onClose={this.toggleModal}
+              loginFunc={this.loginFunc}
+            />
           </div>
         </div>
       </header>

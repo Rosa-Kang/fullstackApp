@@ -133,12 +133,18 @@
 
 @media screen and (min-width: 1440px) {
   .header {
-    margin: 24px 190px;
+    margin: 24px 195px;
+  }
+  .header__right #save {
+    margin-right: 16px;
+  }
+  .header__right--sub {
+    margin: 0px 16px;
   }
 }
 
 .loginCtrl {
-  font-family: myDemi;
+  font-family: myMedium;
   color: grey;
   position: fixed;
   top: 0;
@@ -153,34 +159,172 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   background: white;
-  width: 30%;
+  width: 88%;
   height: auto;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.loginCtrl__text h1 {
+  font-size: 14px;
+}
+
+.loginCtrl__text--all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 16px;
+}
+
+.loginCtrl__text--all--left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginCtrl__text--all--left input {
+  width: 200px;
+  border-radius: 4px;
+  margin: 6px auto;
+  height: 20px;
+  border: 1px #e1e1e1 solid;
+}
+
+.loginCtrl__text--all--left #buttons button {
+  margin: 5px;
+  color: #3899ec;
+  -webkit-box-shadow: inset 0 0 0 1px #3899ec;
+          box-shadow: inset 0 0 0 1px #3899ec;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.loginCtrl__text--all--right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.loginCtrl__text--all--right #continueF {
+  background: #3b5998 url(../assets/icon/SVG/Icon-facebook.svg);
+}
+
+.loginCtrl__text--all--right #continueI {
+  background: #cb62e0 url(../assets/icon/SVG/Icon-instagram.svg);
+}
+
+.loginCtrl__text--all--right #continueF,
+.loginCtrl__text--all--right #continueI {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Roboto, HelveticaNeueW01-55Roma, HelveticaNeueW02-55Roma, HelveticaNeueW10-55Roma, sans-serif, sans-serif;
+  color: white;
+  font-size: 11px;
+  text-align: center;
+  margin: 6px 10px;
+  width: 200px;
+  height: 26px;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: 16px 50%;
 }
 
-.loginCtrl__text h3 {
-  margin: 20px 10px;
-}
-
-.loginCtrl__text button {
-  height: 36px;
-  border-radius: 18px;
+.loginCtrl__text--all--right button {
   color: #3899ec;
-  background-color: transparent;
-  border-color: #3899ec;
-  margin: 15px 10px;
+  -webkit-box-shadow: inset 0 0 0 1px #3899ec;
+          box-shadow: inset 0 0 0 1px #3899ec;
+  border-radius: 5px;
+  width: 85px;
+  margin: 0 auto;
+  background-color: white;
 }
 
-.loginCtrl__text img {
-  margin: 10px 10px;
+@media only screen and (min-width: 768px) {
+  .loginCtrl__text--all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .loginCtrl__text--all--left {
+    margin: 0px 16px;
+  }
+  .loginCtrl__text--all--left input {
+    width: 30vw;
+  }
+  .loginCtrl__text--all--left button {
+    font-size: 13px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .loginCtrl__text--all--right {
+    margin: 0px 16px;
+  }
+  .loginCtrl__text--all--right #continueF,
+  .loginCtrl__text--all--right #continueI {
+    width: 30vw;
+    font-size: 13px;
+  }
+  .loginCtrl__text--all--right button {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .loginCtrl__text {
+    font-size: 14px;
+    width: 50%;
+  }
+  .loginCtrl__text h1 {
+    font-size: 20px;
+  }
+  .loginCtrl__text input {
+    width: 20vw;
+    height: 1.6vw;
+    font-size: 16px;
+  }
+  .loginCtrl__text #continueF,
+  .loginCtrl__text #continueI {
+    width: 20vw;
+    height: 2vw;
+    font-size: 17px;
+  }
 }
 
 .slider {
@@ -207,7 +351,7 @@
 
 .slider__wrapper--slide {
   display: inline-block;
-  height: 80%;
+  height: 84%;
   width: 100%;
   -webkit-animation-name: fade;
           animation-name: fade;
@@ -236,7 +380,6 @@
 @media screen and (min-width: 768px) {
   .slider {
     width: 91%;
-    margin-bottom: 24px;
   }
   .slider h3 {
     font-size: 19px;
@@ -384,6 +527,7 @@
 
 .masonry-wrapper {
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .masonry-wrapper .masonry #profile {
@@ -469,7 +613,7 @@
 
 @media only screen and (min-width: 768px) {
   .masonry-wrapper {
-    margin: 0px 24px;
+    margin: 0px 24px 24px 24px;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -516,7 +660,7 @@
 
 @media only screen and (min-width: 1440px) {
   .masonry-wrapper {
-    margin: 0px 180px;
+    margin: 0px 180px 48px 180px;
   }
 }
 
@@ -844,7 +988,7 @@
 
 .AllStory__one--article {
   margin: 16px;
-  color: black;
+  color: grey;
 }
 
 @media screen and (min-width: 768px) {

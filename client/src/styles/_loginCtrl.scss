@@ -1,5 +1,5 @@
 .loginCtrl {
-  font-family: myDemi;
+  font-family: myMedium;
   color: grey;
   position: fixed;
   top: 0;
@@ -9,28 +9,132 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: 2;
   &__text {
+    h1 {
+      font-size: 14px;
+    }
     display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     background: white;
-    width: 30%;
+    width: 88%;
     height: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    justify-content: center;
-    h3 {
-      margin: 20px 10px;
+    &--all {
+      display: flex;
+      flex-direction: column;
+      margin: 16px;
+      &--left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input {
+          width: 200px;
+          border-radius: 4px;
+          margin: 6px auto;
+          height: 20px;
+          border: 1px #e1e1e1 solid;
+        }
+        #buttons {
+          button {
+            margin: 5px;
+            color: #3899ec;
+            box-shadow: inset 0 0 0 1px #3899ec;
+            border-radius: 5px;
+            background-color: white;
+          }
+        }
+      }
+      &--right {
+        display: flex;
+        flex-direction: column;
+        #continueF {
+          background: #3b5998 url(../assets/icon/SVG/Icon-facebook.svg);
+        }
+        #continueI {
+          background: #cb62e0 url(../assets/icon/SVG/Icon-instagram.svg);
+        }
+        #continueF,
+        #continueI {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: Roboto, HelveticaNeueW01-55Roma, HelveticaNeueW02-55Roma, HelveticaNeueW10-55Roma, sans-serif,
+            sans-serif;
+          color: white;
+          font-size: 11px;
+          text-align: center;
+          margin: 6px 10px;
+          width: 200px;
+          height: 26px;
+          border-radius: 5px;
+          background-repeat: no-repeat;
+          background-position: 16px 50%;
+        }
+        button {
+          color: #3899ec;
+          box-shadow: inset 0 0 0 1px #3899ec;
+          border-radius: 5px;
+          width: 85px;
+          margin: 0 auto;
+          background-color: white;
+        }
+      }
     }
-    button {
-      height: 36px;
-      border-radius: 18px;
-      color: #3899ec;
-      background-color: transparent;
-      border-color: #3899ec;
-      margin: 15px 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .loginCtrl {
+    &__text {
+      &--all {
+        display: flex;
+        flex-direction: row;
+        &--left {
+          margin: 0px 16px;
+          input {
+            width: 30vw;
+          }
+          button {
+            font-size: 13px;
+            align-self: flex-end;
+          }
+        }
+        &--right {
+          margin: 0px 16px;
+          #continueF,
+          #continueI {
+            width: 30vw;
+            font-size: 13px;
+          }
+          button {
+            font-size: 13px;
+          }
+        }
+      }
     }
-    img {
-      margin: 10px 10px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .loginCtrl {
+    &__text {
+      font-size: 14px;
+      width: 50%;
+      h1 {
+        font-size: 20px;
+      }
+      input {
+        width: 20vw;
+        height: 1.6vw;
+        font-size: 16px;
+      }
+      #continueF,
+      #continueI {
+        width: 20vw;
+        height: 2vw;
+        font-size: 17px;
+      }
     }
   }
 }

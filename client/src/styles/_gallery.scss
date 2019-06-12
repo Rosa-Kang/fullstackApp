@@ -1,6 +1,6 @@
 .masonry-wrapper {
   text-align: center;
-
+  margin-bottom: 16px;
   .masonry {
     #profile {
       width: 40px;
@@ -62,7 +62,7 @@
 
 @media only screen and (min-width: 768px) {
   .masonry-wrapper {
-    margin: 0px 24px;
+    margin: 0px 24px 24px 24px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -99,6 +99,6 @@
 }
 @media only screen and (min-width: 1440px) {
   .masonry-wrapper {
-    margin: 0px 180px;
+    margin: 0px 180px 48px 180px;
   }
 }
