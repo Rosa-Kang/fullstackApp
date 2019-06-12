@@ -24,12 +24,12 @@ export default class GalleryCtrl extends Component {
           likes: photoList.likes,
           image: photoList.thumb,
           profile: photoList.profile,
+          description: photoList.description,
           username: photoList.username,
           tags: photoList.tags,
           style: photoList.style
         };
       });
-
       console.log(newPhotos);
       this.setState({
         photos: newPhotos,
@@ -91,6 +91,7 @@ export default class GalleryCtrl extends Component {
         console.log(filteredItem.style);
         // change current item to lowercase
         const style = filteredItem.style.toLowerCase();
+        const description = filteredItem.description.toLowerCase();
         const title = filteredItem.title.toLowerCase();
         const username = filteredItem.username.toLowerCase();
         // change search term to lowercase
@@ -104,8 +105,9 @@ export default class GalleryCtrl extends Component {
           return title.includes(filter);
         } else if (username.includes(filter)) {
           return username.includes(filter);
+        } else if (description.includes(filter)) {
+          return description.includes(filter);
         }
-
         // check to see if the current list item includes the search term
         // If it does, it will be added to newList. Using lowercase eliminates
         // issues with capitalization in search terms and search content

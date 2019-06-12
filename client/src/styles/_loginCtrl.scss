@@ -126,14 +126,18 @@
       }
       input {
         width: 20vw;
-        height: 1.6vw;
+        height: 3vw;
         font-size: 16px;
       }
       #continueF,
       #continueI {
         width: 20vw;
-        height: 2vw;
+        height: 3.2vw;
         font-size: 17px;
+        margin-bottom: 12px;
+      }
+      button {
+        font-size: 14px;
       }
     }
   }
