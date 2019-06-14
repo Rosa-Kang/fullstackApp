@@ -1005,5 +1005,11 @@
   .AllStory {
     margin: 72px 180px;
   }
+  .AllStory__one {
+    font-size: 23px;
+  }
+  .AllStory__one--article {
+    margin: 32px 16px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

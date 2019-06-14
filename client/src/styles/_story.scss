@@ -28,5 +28,11 @@
 @media screen and (min-width: 1440px) {
   .AllStory {
     margin: 72px 180px;
+    &__one {
+      font-size: 23px;
+      &--article {
+        margin: 32px 16px;
+      }
+    }
   }
 }
