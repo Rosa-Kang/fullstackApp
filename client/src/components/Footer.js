@@ -42,7 +42,7 @@ export default class Footer extends Component {
               Toronto, Ontario M5V 1L7
             </div>
             <div id="slim">
-              <a href="mailto:info@thebeesknees.com"> info@thebeesknees.com</a>
+              <a href="mailto:hethers86@hotmail.com"> info@thebeesknees.com</a>
             </div>
           </div>
           <div className="footer__text--mid">
@@ -57,7 +57,7 @@ export default class Footer extends Component {
               US / South America / Japan
             </div>
             <div id="slim">
-              <a href="mailto:marsha.vlasic@artistgrp.com">
+              <a href="mailto:hethers86@hotmail.com">
                 marsha.vlasic@artistgrp.com
               </a>
             </div>

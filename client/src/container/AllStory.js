@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Story from "../components/Story";
 
-const journalsUrl = `http://localhost:8001/journals`;
+const journalsUrl = `https://radiant-escarpment-93698.herokuapp.com/journals`;
 export default class AllStory extends Component {
   state = {
     stories: []

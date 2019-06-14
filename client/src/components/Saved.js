@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Gallery from "../components/Gallery";
 import axios from "axios";
 
-const photoUrl = `http://localhost:8001/photos`;
+const photoUrl = `https://radiant-escarpment-93698.herokuapp.com/photos`;
 
 export default class Saved extends Component {
   state = {

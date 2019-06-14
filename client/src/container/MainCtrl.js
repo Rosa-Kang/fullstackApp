@@ -3,7 +3,7 @@ import axios from "axios";
 import Slider from "./Slider";
 import JournalsCtrl from "../container/JournalCtrl";
 
-const photoUrl = `http://localhost:8001/photos`;
+const photoUrl = `https://radiant-escarpment-93698.herokuapp.com/photos`;
 
 export default class MainCtrl extends Component {
   state = {
